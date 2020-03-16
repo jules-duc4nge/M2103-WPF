@@ -1,0 +1,26 @@
+﻿<Window x:Class="Tp_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tp_01"
+        mc:Ignorable="d"
+        Title="Jules-DNS" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="Srch_bar" HorizontalAlignment="Stretch" VerticalAlignment="Center" Width="Auto" Margin="20" Background="WhiteSmoke"></TextBox>
+        <ListBox x:Name="Rslt_list" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Margin="20" Grid.Column="1"></ListBox>
+
+        <Button x:Name="Btn_valid" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Content="OK" Width="100" Grid.Row="1" Height="Auto" Click="Btn_valid_Click"></Button>
+        <Button x:Name="Btn_close" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10" Content="Quitter" Width="100" Grid.Row="1" Grid.Column="1" Height="Auto" Click="Btn_close_Click"></Button>
+    </Grid>
+</Window>
