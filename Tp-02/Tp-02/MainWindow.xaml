@@ -11,10 +11,11 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="70px"></RowDefinition>
         </Grid.RowDefinitions>
-        <Canvas HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Background="Black" Name="Cvs_Draw" MouseDown="Cvs_Draw_Click"/>
+        <!-- <Canvas HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Background="Black" Name="Cvs_Draw" MouseDown="Cvs_Draw_Click"/>-->
+        <local:DrawingSurface HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Background="Black" x:Name="Cvs_Draw"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="Auto" Height="Auto">
-            <Button Margin="10" Padding="20 0" Height="30" Name="Btn_clear" Content="Clear"/>
-            <ComboBox Margin="10" Height="30" SelectedIndex="0" Name="Cbb_Colors">
+            <Button Margin="10" Padding="20 0" Height="30" Name="Btn_clear" Content="Clear" Click="Btn_clear_Click"/>
+            <ComboBox Margin="10" Height="30" SelectedIndex="0" Name="Cbb_Colors" SelectionChanged="Cbb_Colors_SelectionChanged">
                 <StackPanel Orientation="Horizontal">
                     <Rectangle Height="10" Width="10" Fill="Orange" VerticalAlignment="Center" Margin="5"/>
                     <TextBlock Text="Orange" VerticalAlignment="Center"/>
@@ -31,6 +32,5 @@
                 </StackPanel>
             </ComboBox>
         </StackPanel>
-        <Label x:Name="DebugLabel" Content="Label" HorizontalAlignment="Left" Margin="101,26,0,0" Grid.Row="1" VerticalAlignment="Top"/>
     </Grid>
 </Window>
