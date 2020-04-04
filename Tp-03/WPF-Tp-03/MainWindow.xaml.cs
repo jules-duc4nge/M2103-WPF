@@ -24,5 +24,20 @@ namespace WPF_Tp_03
         {
             InitializeComponent();
         }
+
+        private void Btn_update_Click(object sender, RoutedEventArgs e)
+        {
+            Lbl_one.Content = "Hey !";
+        }
+
+        private void Btn_update_Click_2(object sender, RoutedEventArgs e)
+        {
+            Lbl_two.Content = "We are number one !";
+        }
+
+        private void Btn_reset_Click(object sender, RoutedEventArgs e)
+        {
+            Sld_one.Value = 0;
+        }
     }
 }

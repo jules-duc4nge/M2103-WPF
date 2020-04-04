@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Tp_03"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="400" Width="250">
+    <StackPanel HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
+        <Label x:Name="Lbl_one" Content="We are number one !" Margin="10"/>
+        <Label x:Name="Lbl_two" Content="{Binding ElementName=Lbl_one, Path=Content, Mode=TwoWay}" Margin="10"/>
+        <Button x:Name="Btn_update" Content="Click me !" Margin="10" Click="Btn_update_Click"/>
+        <Button x:Name="Btn_update_2" Content="Click me too !" Margin="10" Click="Btn_update_Click_2"/>
+        <Label x:Name="Lbl_cursor" Content="{Binding ElementName=Sld_one, Path=Value}" Margin="10" HorizontalAlignment="Center"/>
+        <Slider x:Name="Sld_one" Minimum="0" Maximum="42"/>
+        <Button x:Name="Btn_reset" Content="Reset here !" Margin="10" Click="Btn_reset_Click"/>
+    </StackPanel>
 </Window>
