@@ -58,7 +58,7 @@ namespace Tp_02
     public partial class MainWindow : Window
     {
         List<SolidColorBrush> colors = 
-            new List<SolidColorBrush> {Brushes.Orange, Brushes.Green, Brushes.Blue};
+            new List<SolidColorBrush> {Brushes.Orange, Brushes.Green, Brushes.Blue, Brushes.IndianRed};
         public MainWindow()
         {
             InitializeComponent();
